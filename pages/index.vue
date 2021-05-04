@@ -117,16 +117,17 @@ export default {
         width: 100%
     
       .product-card 
-        height: auto
         display: block
         max-width: 100%
-        // height: 330px
         position: relative
         white-space: normal
         border: 1px solid #ccc
         border-bottom: none
         border-radius: 6px 6px 0px 0px
         background-color: $white
+
+        @media only screen and (max-width: 780px)
+          height: auto
 
 
         img 
