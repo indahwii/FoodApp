@@ -1,5 +1,6 @@
 <template>
     <div class="footer">
+        <p>www.themealdb.com 2021 created by indahwii</p>
     </div>
 </template>
 
@@ -28,12 +29,15 @@ export default {
 @import '~/assets/sass/style.sass';
 
 .footer
-    // position: fixed
+    position: fixed
     left: 0
     bottom: 0
     width: 100%
-    height: 100px
+    height: 40px
     background-color: $purple
     overflow: hidden
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 1)
+    text-align: center
+    color: $white
+    padding: 10px
 </style>

@@ -4,27 +4,23 @@
         <img src="images/1.jpg">
         <img src="images/1.jpg">
       </carousel>
-      <h2 class="title-home">Menu Makanan</h2>
-        <div class="catalog">
-          <div class="item" v-for="item in details" :key="item">
-            <div class="product-card" @click="detailCategori()">
-              <img :src="item.strMealThumb">
-              <div class="product-body">
-                <p class="product-title">{{ item.strCategory }}</p>
-                <p>{{ item.strMeal }}</p>
-
-                <p>Asal : {{ item.strArea }}</p>
-                <p class="desc"></p>
-              </div>
-              <div class="product-action">
-                <button @click="addtocart(item.idCategory, item.strCategory, item.strCategoryThumb, item.strCategoryDescription )">
-                    <img src="images/icart.png">
-                </button>
-                <p>Rp. 50.000;</p>
+      <h2 class="title-home">Galery {{ this.$route.query.params }}</h2>
+      <div class="justify-center">
+        <div class="content">
+          <div class="catalog">
+            <div class="item" v-for="item in details" :key="item">
+              <div class="product-card" @click="detailCategori()">
+                <img :src="item.strMealThumb">
+                <div class="product-body">
+                  <p class="product-title">{{ item.strMeal }}</p>
+                  <p>Asal : {{ item.strArea }}</p>
+                  <p class="desc"></p>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
     </div>
 </template>
 
@@ -81,23 +77,6 @@ export default {
   $gap-1: 10px
   $gap-2: 20px
 
-  .owl-theme .owl-nav
-    // display: none !important
-
-  .banner
-      width: 100%
-      margin: 0 auto
-      text-align: center
-      padding: $gap-2 $gap-2 0 $gap-2
-      img 
-        margin: 0 auto
-        width: 100%
-        max-height: 500px
-
-      @media screen and (max-width: $small)
-        img 
-          width: 100%
-
   .title-home 
     font-size: 30px
     font-weight: bold
@@ -105,16 +84,14 @@ export default {
     padding-top: $gap-2
 
   .catalog
-    width: 100%
-    display: flex
-    flex-wrap: wrap
-    flex: 1 1 auto
-    padding-top: $gap-2
-    padding-bottom: $gap-2
-    justify-content: center
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
 
     .item 
-      width: 20%
+      width: 18%
       margin: 10px
 
       @media only screen and (max-width: 780px)

@@ -1,5 +1,6 @@
 $purple: #424874
 $grey: #f4f6ff
+$white: #ffffff
 $br1: 6px
 $nav-height: 50px
 $gap1: 10px
@@ -24,6 +25,7 @@ $medium: 900px
     width: 0px
 
 body
+    overflow: auto
     font-size: 100%
     font-family: 'Heebo', sans-serif
 
@@ -74,7 +76,22 @@ h2
     width: 100%
     margin-bottom: $nav-height
     position: relative
-    
+
+.justify-center
+    justify-content: center
+    display: flex  
+    -ms-flex-wrap: wrap
+    flex-wrap: wrap
+    margin-right: -15px
+    margin-left: -15px
+
+.content 
+    width: 90%
+    flex: 0 0 90%; 
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
 
 @media screen and (max-width: $small)
     .wrapper
